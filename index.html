@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" ng-app="tickTockApp">
+<head>
+    <meta charset="utf-8">
+    <title>TickTack - Online clack and alarm</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app/js/app.js"></script>
+    <script src="app/js/controllers.js"></script>
+</head>
+<body>
+
+<div class="view-container">
+    <div ng-view class="view-frame">
+        <div ng-controller="ClockCtrl">
+            {{hour}}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
