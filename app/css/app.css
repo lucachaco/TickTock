@@ -1,21 +1,9 @@
-
-.fullscreenDiv {
-    width: 100%;
-    height: auto;
-    bottom: 0px;
-    top: 0px;
-    left: 0;
-    position: absolute;
-}
-
 .center {
+    left: 25%;
+    width: 50%;
+    top: 35%;
     position: absolute;
-    width: 600px;
-    height: 100px;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -300px;
+    text-align: center;
 }
 
 .one {
@@ -38,12 +26,14 @@
     height: 85px;
     background: url(../img/digits.png) -177px 0;
 }
+
 .four {
     display: inline-block;
     width: 85px;
     height: 85px;
     background: url(../img/digits.png) -0px -89px;
 }
+
 .five {
     display: inline-block;
     width: 85px;
