@@ -7,8 +7,6 @@ var tickTockControllers = angular.module('tickTockControllers', []);
 tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
     function ($scope, $timeout) {
 
-        var _tick;
-
         $scope.digits = [];
         $scope.digits.push("zero");
         $scope.digits.push("one");
@@ -21,9 +19,10 @@ tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
         $scope.digits.push("eight");
         $scope.digits.push("nine");
 
+        $scope.timeSelectorVisible = false;
         $scope.tickInterval = 1000; //ms
 
-        _tick = function () {
+        var _tick = function () {
             var today = new Date();
 
 
@@ -48,8 +47,12 @@ tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
             return $scope.digits[Math.floor($index / 10)];
         };
 
+        $scope.setAlarm = function () {
+            $scope.timeSelectorVisible = true;
+        };
+
         $scope.saveTime = function () {
-            return alert($scope.selectedHour + " - " + $scope.selectedMinute);
+            $scope.timeSelectorVisible = false;
         };
 
         $timeout(_tick, $scope.tickInterval);

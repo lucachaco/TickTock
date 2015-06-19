@@ -31,7 +31,7 @@
                     <div class="{{getFirstDigit(second)}}"></div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" ng-show="timeSelectorVisible">
                 <div class=" col-xs-4">
                     <select class="form-control" ng-model="selectedHour">
                         <option value="0">00</option>
@@ -63,7 +63,7 @@
                     </select>
                 </div>
                 <div class=" col-xs-4">
-                    <select class="form-control" ng-model="selectedMinute" >
+                    <select class="form-control" ng-model="selectedMinute">
                         <option value="0">00</option>
                         <option value="1">01</option>
                         <option value="2">02</option>
@@ -130,6 +130,21 @@
                     Save
                 </button>
 
+            </div>
+
+            <div ng-show="!timeSelectorVisible">
+                <div ng-show="!selectedHour || !selectedMinute">
+                    <a href="#" ng-click="setAlarm()"> Set alarm </a>
+                </div>
+                <div ng-show="selectedHour && selectedMinute">
+                    Alarm set at {{selectedHour}}:{{selectedMinute}}
+                    <div>
+                        <a href="#" ng-click="setAlarm()"> Change </a>
+                    </div>
+                </div>
+            </div>
+
+            <div>
 
             </div>
         </div>
