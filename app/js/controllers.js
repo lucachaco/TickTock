@@ -10,7 +10,6 @@ tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
         var _tick;
 
         $scope.digits = [];
-
         $scope.digits.push("zero");
         $scope.digits.push("one");
         $scope.digits.push("two");
@@ -37,19 +36,22 @@ tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
 
         $scope.getFirstDigit = function ($index) {
 
-            if ($index < 10){
+            if ($index < 10) {
                 return $scope.digits[$index];
             }
-            else if ($index < 100){
+            else if ($index < 100) {
                 return $scope.digits[Math.floor($index % 10)];
             }
         };
 
         $scope.getSecondDigit = function ($index) {
-            return  $scope.digits[Math.floor($index/10)];
+            return $scope.digits[Math.floor($index / 10)];
         };
 
-        // Start the timer
+        $scope.saveTime = function () {
+            return alert($scope.selectedHour + " - " + $scope.selectedMinute);
+        };
+
         $timeout(_tick, $scope.tickInterval);
 
 
