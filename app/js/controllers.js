@@ -30,6 +30,10 @@ tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
             $scope.minute = today.getMinutes();
             $scope.second = today.getSeconds();
 
+            if ($scope.minute === parseInt($scope.selectedMinute)) {
+                console.log("alarm");
+            }
+
             $timeout(_tick, $scope.tickInterval); // reset the timer
         };
 
