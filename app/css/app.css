@@ -10,23 +10,78 @@
 
 .center {
     position: absolute;
-    border: 1px solid blue;
-    width: 400px;
+    width: 600px;
     height: 100px;
     top: 50%;
     left: 50%;
-    margin-top: -25px;
-    margin-left: -50px;
+    margin-top: -50px;
+    margin-left: -300px;
 }
 
 .one {
+    display: inline-block;
     width: 85px;
     height: 85px;
     background: url(../img/digits.png) 0 0;
 }
 
 .two {
+    display: inline-block;
     width: 85px;
     height: 85px;
     background: url(../img/digits.png) -87px 0;
+}
+
+.three {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) -177px 0;
+}
+.four {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) -0px -89px;
+}
+.five {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) -87px -89px;
+}
+
+.six {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) -177px -89px;
+}
+
+.seven {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) -0px -176px;
+}
+
+.eight {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) -87px -176px;
+}
+
+.nine {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) -177px -176px;
+}
+
+.zero {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) -0px -262px;
 }

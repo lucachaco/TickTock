@@ -6,15 +6,22 @@ var tickTockControllers = angular.module('tickTockControllers', []);
 
 tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
     function ($scope, $timeout) {
-        var _formatTimeUnit,
-            _tick;
 
-        _formatTimeUnit = function (i) {
-            if (i < 10) {
-                i = "0" + i;
-            }
-            return i;
-        };
+        var _tick;
+
+        $scope.digits = [];
+
+        $scope.digits.push("zero");
+        $scope.digits.push("one");
+        $scope.digits.push("two");
+        $scope.digits.push("three");
+        $scope.digits.push("four");
+        $scope.digits.push("five");
+        $scope.digits.push("six");
+        $scope.digits.push("seven");
+        $scope.digits.push("eight");
+        $scope.digits.push("nine");
+
         $scope.tickInterval = 1000; //ms
 
         _tick = function () {
@@ -22,10 +29,24 @@ tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
 
 
             $scope.hour = today.getHours();
-            $scope.minute = _formatTimeUnit(today.getMinutes());
-            $scope.second = _formatTimeUnit(today.getSeconds());
+            $scope.minute = today.getMinutes();
+            $scope.second = today.getSeconds();
 
             $timeout(_tick, $scope.tickInterval); // reset the timer
+        };
+
+        $scope.getFirstDigit = function ($index) {
+
+            if ($index < 10){
+                return $scope.digits[$index];
+            }
+            else if ($index < 100){
+                return $scope.digits[Math.floor($index % 10)];
+            }
+        };
+
+        $scope.getSecondDigit = function ($index) {
+            return  $scope.digits[Math.floor($index/10)];
         };
 
         // Start the timer

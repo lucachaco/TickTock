@@ -16,15 +16,20 @@
 
 <div class="view-container">
     <div ng-view class="view-frame">
-
-
             <div class='fullscreenDiv'  ng-controller="ClockCtrl">
-                <div class="center">{{hour}}:{{minute}}:{{second}}</div>
-                <div class="one"></div>
-                <div class="two"></div>
+                <div class="center">
+                    <div class="{{getSecondDigit(hour)}}"></div>
+                    <div class="{{getFirstDigit(hour)}}"></div>
+                    &nbsp;
+                    &nbsp;
+                    <div class="{{getSecondDigit(minute)}}"></div>
+                    <div class="{{getFirstDigit(minute)}}"></div>
+                    &nbsp;
+                    &nbsp;
+                    <div class="{{getSecondDigit(second)}}"></div>
+                    <div class="{{getFirstDigit(second)}}"></div>
+                </div>
             </div>
-
-
     </div>
 </div>
 
