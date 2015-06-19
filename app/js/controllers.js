@@ -9,15 +9,12 @@ tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
         var _formatTimeUnit,
             _tick;
 
-
         _formatTimeUnit = function (i) {
             if (i < 10) {
                 i = "0" + i;
             }
             return i;
         };
-
-        $scope.clock = "loading clock..."; // initialise the time variable
         $scope.tickInterval = 1000; //ms
 
         _tick = function () {

@@ -1,0 +1,32 @@
+
+.fullscreenDiv {
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    position: absolute;
+}
+
+.center {
+    position: absolute;
+    border: 1px solid blue;
+    width: 400px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px;
+    margin-left: -50px;
+}
+
+.one {
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) 0 0;
+}
+
+.two {
+    width: 85px;
+    height: 85px;
+    background: url(../img/digits.png) -87px 0;
+}

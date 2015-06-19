@@ -2,8 +2,10 @@
 <html lang="en" ng-app="tickTockApp">
 <head>
     <meta charset="utf-8">
-    <title>TickTack - Online clack and alarm</title>
+    <title>TickTack - Online clock and alarm</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="app/css/app.css">
+    <link rel="icon" href="app/img/favicon.png" type="image/gif" sizes="16x16">
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
@@ -14,9 +16,15 @@
 
 <div class="view-container">
     <div ng-view class="view-frame">
-        <div ng-controller="ClockCtrl">
-            {{hour}}:{{minute}}:{{second}}
-        </div>
+
+
+            <div class='fullscreenDiv'  ng-controller="ClockCtrl">
+                <div class="center">{{hour}}:{{minute}}:{{second}}</div>
+                <div class="one"></div>
+                <div class="two"></div>
+            </div>
+
+
     </div>
 </div>
 
