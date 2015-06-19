@@ -16,20 +16,22 @@
 
 <div class="view-container">
     <div ng-view class="view-frame">
-            <div ng-controller="ClockCtrl">
-                <div class="center">
+        <div ng-controller="ClockCtrl">
+            <div class="row center">
+                <div class="col-md-4">
                     <div class="{{getSecondDigit(hour)}}"></div>
                     <div class="{{getFirstDigit(hour)}}"></div>
-                    &nbsp;
-                    &nbsp;
+                </div>
+                <div class="col-md-4">
                     <div class="{{getSecondDigit(minute)}}"></div>
                     <div class="{{getFirstDigit(minute)}}"></div>
-                    &nbsp;
-                    &nbsp;
+                </div>
+                <div class="col-md-4">
                     <div class="{{getSecondDigit(second)}}"></div>
                     <div class="{{getFirstDigit(second)}}"></div>
                 </div>
             </div>
+        </div>
     </div>
 </div>
 
