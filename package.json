@@ -1,0 +1,19 @@
+{
+  "name": "TickTock",
+  "version": "1.0.0",
+  "description": "Small online clock with alarm.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucachaco/TickTock.git"
+  },
+  "author": "luiscarlos@sourcequarter.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucachaco/TickTock/issues"
+  },
+  "homepage": "https://github.com/lucachaco/TickTock"
+}
