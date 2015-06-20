@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lucachaco/TickTock/issues"
   },
-  "homepage": "https://github.com/lucachaco/TickTock"
+  "homepage": "https://github.com/lucachaco/TickTock",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
