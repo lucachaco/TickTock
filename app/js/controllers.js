@@ -30,8 +30,8 @@ tickTockControllers.controller('ClockCtrl', ['$scope', '$timeout',
             $scope.minute = today.getMinutes();
             $scope.second = today.getSeconds();
 
-            if ($scope.minute === parseInt($scope.selectedMinute)) {
-                console.log("alarm");
+            if ($scope.hour === parseInt($scope.selectedHour) && $scope.minute === parseInt($scope.selectedMinute) && !$scope.timeSelectorVisible) {
+                document.getElementById('audio_alarm').play();
             }
 
             $timeout(_tick, $scope.tickInterval); // reset the timer
