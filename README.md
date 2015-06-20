@@ -6,7 +6,7 @@ To run the project just clone the repository and an open the file index.html in 
 
 Please access the demo here: http://tick-tock.sourcequarter.com/
 
-Some of the tool used for build this small project.
+Some of the tools used to build this small project.
 * Vagrant
 * npm
 * Angular
